@@ -22,6 +22,7 @@
     "default_icon":{
       "16":"assets/icon-16x16.png",
       "32":"assets/icon-32x32.png"
-    }
+    },
+    "default_popup": "index.html"
    }
 }
