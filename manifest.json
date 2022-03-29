@@ -8,9 +8,6 @@
      "js":["index.js"]
     }
   ],
-  "background":{
-    "scripts":["background.js"]
-  },
   "permissions":[
     "tabs"
   ],

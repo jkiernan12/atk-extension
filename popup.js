@@ -1,7 +1,9 @@
+let table = document.querySelector('#atk-data')
+let title = document.querySelector('#atk-product-data-title')
+
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello from popup!"}, function(response) {
+  chrome.tabs.sendMessage(tabs[0].id, null, function(response) {
     console.log(response)
-    let table = document.querySelector('#atk-data')
     response.content.forEach(el => {
       table.innerHTML += `
       <tr>
@@ -12,6 +14,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       </tr>
       `
     })
+    title.textContent = response.title + " Data"
   });
 });
 

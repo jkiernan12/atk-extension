@@ -2,6 +2,7 @@
 let sectionTitle = document.querySelector('h1');
 let atkContent = document.querySelector('#new-atk-title-here')
 let content = document.querySelectorAll('.reviewable-detail__reviewables > .accordion-content-wrapper')
+let title = document.querySelector('h1').textContent
 
 // convert content to array of objects w/ data
 let items = Array.from(content).map(item => {
@@ -26,6 +27,6 @@ let items = Array.from(content).map(item => {
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    sendResponse({content: items});
+    sendResponse({content: items, title});
   }
 ); 
