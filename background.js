@@ -1,12 +1,28 @@
 function scrapeContent(){
-  let sectionTitle = document.querySelector('h1');
-  sectionTitle.textContent = "poo"
-  console.log('title', sectionTitle)
-  // chrome.tabs.create({ url: chrome.runtime.getURL("index.html") })
-  // .then( () => {
-  //   let content = document.querySelector('#new-atk-title-here')
-  //   content.textContent = 'ble'
-  // })
+  chrome.browserAction.setPopup(
+    {
+      popup: 'index.html'
+    },
+    getPage
+  )
 }
+
+function getPage() {
+  chrome.runtime.getBackgroundPage((window) => {
+    scrapePage(window.document)
+  })
+}
+
+// chrome.runtime.onMessage.addListener(
+//   (request, sender, sendResponse) => {
+//     console.log(request)
+//     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+//       chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello from background!"}, function(response) {
+//         console.log(response)
+//         sendResponse({content: 'sent from background'});
+//       });
+//     });
+//   }
+// );
 
 chrome.browserAction.onClicked.addListener(scrapeContent)
