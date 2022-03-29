@@ -14,3 +14,5 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     })
   });
 });
+
+new ClipboardJS('#get-data-submit');

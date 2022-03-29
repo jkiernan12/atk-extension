@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "selenium-webdriver": "^4.1.1"
+    "clipboard": "^2.0.10"
   }
 }
