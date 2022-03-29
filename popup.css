@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  background-color: #bf2704;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 25px 0;
+}
+
+table, tr, td {
+  border: 1px solid #9b9b9b;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr:nth-child(even){
+  background-color: #a3a3a3;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #bf2704;
+  color: white;
+}
+
+button {
+  background-color: #bf2704;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}

@@ -1,17 +1,22 @@
 <html>
-  <h1>ATK Tools</h1>
-  <h2>Product Data</h2>
-  <form> 
-    <table id="atk-data" style="border: 1px solid black;">
-      <tr>
-        <th>Brand</th>
-        <th>Status</th>
-        <th>Model</th>
-        <th>Price</th>
-      </tr>
-    </table>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <h1>ATK Tools</h1>
+    <h2>Product Data</h2>
+    <form> 
+      <table id="atk-data" style="border: 1px solid black;">
+        <tr>
+          <th>Brand</th>
+          <th>Status</th>
+          <th>Model</th>
+          <th>Price</th>
+        </tr>
+      </table>
+    </form>
     <button id="get-data-submit" data-clipboard-target="#atk-data">Copy to Clipboard</button>
-  </form>
-  <script src="/node_modules/clipboard/dist/clipboard.min.js"></script>
-  <script type="module" src="/popup.js"></script>
+    <script src="/node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script type="module" src="/popup.js"></script>
+  </body>
 </html>
